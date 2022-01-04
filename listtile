@@ -1,0 +1,110 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: ListView(
+          children: [
+            ListTile(
+              title: Text("CASHBACK"),
+              subtitle: Text("learn  everything with east explanation"),
+              leading: CircleAvatar(
+                child: Icon(Icons.message),
+              ),
+            ),
+            ListTile(
+              
+              title: Text("my nae is sahen"),
+              subtitle: Text("learn  everything with east explanation"),
+              leading: CircleAvatar(
+                child: Icon(Icons.info_outline),
+              ),
+            ),
+            ListTile(
+              title: Text("hello"),
+              subtitle: Text("this is me"),
+              leading: CircleAvatar(
+                child: Icon(Icons.message),
+              ),
+            ),
+            ListTile(
+              title: Text("hello"),
+              subtitle: Text("this is me"),
+              leading: CircleAvatar(
+                child: Icon(Icons.message),
+              ),
+            ),
+            ListTile(
+              title: Text("hello"),
+              subtitle: Text("this is me"),
+              leading: CircleAvatar(
+                child: Icon(Icons.message),
+              ),
+            ),
+            ListTile(
+              title: Text("hello"),
+              subtitle: Text("this is me"),
+              leading: CircleAvatar(
+                child: Icon(Icons.message),
+              ),
+            ),
+            ListTile(
+              title: Text("hello"),
+              subtitle: Text("this is me"),
+              leading: CircleAvatar(
+                child: Icon(Icons.message),
+              ),
+            ),
+            ListTile(
+              title: Text("hello"),
+              subtitle: Text("this is me"),
+              leading: CircleAvatar(
+                child: Icon(Icons.message),
+              ),
+            ),
+            ListTile(
+              title: Text("hello"),
+              subtitle: Text("this is me"),
+              leading: CircleAvatar(
+                child: Icon(Icons.message),
+              ),
+            ),
+            ListTile(
+              title: Text("hello"),
+              subtitle: Text("this is me"),
+              leading: CircleAvatar(
+                child: Icon(Icons.message),
+              ),
+            ),
+            ListTile(
+              title: Text("hello"),
+              subtitle: Text("this is me"),
+              leading: CircleAvatar(
+                child: Icon(Icons.message),
+              ),
+            ),
+            ListTile(
+              title: Text("hello"),
+              subtitle: Text("this is me"),
+              leading: CircleAvatar(
+                child: Icon(Icons.message),
+              ),
+            ),
+            ListTile(
+              title: Text("hello"),
+              subtitle: Text("this is me"),
+              leading: CircleAvatar(
+                child: Icon(Icons.message),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
