@@ -1,0 +1,91 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: bdtravel(),
+  ));
+}
+
+class bdtravel extends StatefulWidget {
+  bdState createState() => bdState();
+}
+
+class bdState extends State<bdtravel> {
+  List<String> titleref = <String>[
+    'Frist class ',
+    'secound class',
+    'mediam class',
+    'low class'
+  ];
+  List<String> imageref = <String>[
+    'https://image.freepik.com/free-vector/hotel-room-with-bed-purple-color-illustration_1262-16536.jpg',
+    'https://pix10.agoda.net/hotelImages/937/937098/937098_16080408120045199965.jpg',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXZPUuZpgAJL62L0aZh1kSh4SAqVuiJp_fBwhDkKybVR9gI4xN0NLkDS61kJkWE1jqvxo&usqp=CAU',
+    'https://new-hls.s3.amazonaws.com/hbe/data/cd405fe2-c1d3-1502465650-47c7-b78e-c5eaef6338ea/gallery/room/thumbs/sm_retina_lamana-twin-room_1502467295.jpg'
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('BD hotel booking'),
+        backgroundColor: Colors.blueGrey,
+        centerTitle: true,
+      ),
+      body: Container(
+        child: ListView.builder(
+            padding: const EdgeInsets.all(8),
+            itemCount: titleref.length,
+            itemBuilder: (BuildContext context, int index) {
+              return GestureDetector(
+                onTap: () {
+                  setState(() {
+                    //Navigator.of(context).push(MaterialPageRoute(builder: (context) => blogs()));
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: Text('${titleref[index]}'),
+                      duration: Duration(microseconds: 300),
+                    ));
+                  });
+                },
+                child: Container(
+                    height: 200,
+                    margin: EdgeInsets.all(2),
+                    child: Card(
+                      elevation: 1,
+                      shadowColor: Colors.blue,
+                      child: Row(
+                        children: [
+                          Expanded(
+                            flex: 5,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20.0),
+                              child: Card(
+                                elevation: 20,
+                                shadowColor: Colors.green,
+                                child: Image.network(
+                                  '${imageref[index]}',
+                                  height: 250.0,
+                                  width: 150,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Text(
+                              '${titleref[index]}',
+                              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                            ),
+                          )
+                        ],
+                      ),
+                    )),
+              );
+            }),
+      ),
+    );
+  }
+}
