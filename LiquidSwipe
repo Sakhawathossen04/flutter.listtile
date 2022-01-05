@@ -1,0 +1,38 @@
+import 'package:flutter/material.dart';
+import 'package:liquid_swipe/liquid_swipe.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final pages = [
+      Container(
+        color: Colors.blue,
+        child: Text("kdsukgdfou"),
+      ),
+      Container(
+        color: Colors.green, // same as Colors.blue[500] or Colors.blue.shade500
+      ),
+      Container(
+        color: Colors.orange, // same as Colors.blue[500] or Colors.blue.shade500
+      ),
+      Container(
+        color: Colors.yellow, // same as Colors.blue[500] or Colors.blue.shade500
+      ),
+      Container(
+        color: Colors.red, // same as Colors.blue[500] or Colors.blue.shade500
+      ),
+      Container(
+        color: Colors.pinkAccent, // same as Colors.blue[500] or Colors.blue.shade500
+      ),
+    ];
+
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: LiquidSwipe(pages: pages),
+      ),
+    );
+  }
+}
